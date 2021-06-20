@@ -94,6 +94,7 @@ a:hover{
 .custom-item-3{width: 33.3333%;}
 .custom-item-2{width: 50%;}
 .custom-item-1{width: 100%;}
+
 @media (min-width: 576px) {.custom-container{max-width: 540px; } }
 @media (min-width: 768px) {.custom-container{max-width: 720px; } }
 @media (min-width: 992px) {.custom-container{max-width: 960px; } }
@@ -102,9 +103,6 @@ a:hover{
 .content-center{
 	text-align: center;
 }
-
-
-$color: #000;
 
 @mixin pseudo($display: block, $pos: absolute, $content: ''){
     content: $content;
@@ -116,6 +114,31 @@ $color: #000;
     margin: 0;
     padding: 0;
 }
+
+.anim {
+	-webkit-transition: all .7s;
+	-moz-transition: all .7s;
+	-ms-transition: all .7s;
+	-o-transition: all .7s;
+	transition: all .7s;
+}
+.js .animate-fade{opacity:0;}
+.js .animate-fade.animated{opacity:1;}
+
+.js .animate-left {transform: translateX(-50px);}
+.js .animate-left.animated {transform: translateX(0);}
+
+.js .animate-right {transform: translateX(50px);}
+.js .animate-right.animated {transform: translateX(0);}
+
+.js .animate-top {transform: translateY(-50px);}
+.js .animate-top.animated {transform: translateY(0);}
+
+.js .animate-bottom {transform: translateY(50px);}
+.js .animate-bottom.animated {transform: translateY(0);}
+
+.js .animate-scale {-webkit-transform: scale(0);transform: scale(0);}
+.js .animate-scale.animated {-webkit-transform: scale(1);transform: scale(1);}
 
 
 .wrapper{
